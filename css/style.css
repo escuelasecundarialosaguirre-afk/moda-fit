@@ -1,0 +1,1363 @@
+
+/* =====================================
+   MODA FIT - ESTILOS GENERALES
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --rosa: #EFA3B8;
+    --rosa-claro: #FCE8EE;
+    --rosa-oscuro: #D66F91;
+    --negro: #171717;
+    --gris: #666666;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+main {
+    display: block;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    flex-wrap: wrap;
+}
+/* =====================================
+   ENCABEZADO
+===================================== */
+
+.header {
+    width: 100%;
+    min-height: 110px;
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blanco);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+.footer span {
+    color: var(--rosa-oscuro);
+}
+.navbar {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--rosa-oscuro);
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.header-icons a {
+    color: var(--negro);
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.header-icons a:hover {
+    color: var(--rosa-oscuro);
+}
+
+/* =====================================
+   PORTADA PRINCIPAL
+===================================== */
+
+.hero {
+    min-height: 600px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg,
+        rgba(252,232,238,0.98) 0%,
+        rgba(252,232,238,0.90) 42%,
+        rgba(252,232,238,0.15) 100%),
+        url("../img/portada-moda-fit.jpg");
+
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 580px;
+}
+
+.subtitle {
+    color: var(--rosa-oscuro);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.subtitle) {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gris);
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 16px 30px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--rosa-oscuro);
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   TITULOS DE SECCIONES
+===================================== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title p {
+    color: var(--rosa-oscuro);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    color: var(--negro);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    margin: 0;
+}
+.section-title p {
+    color: var(--rosa-oscuro);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+/* =====================================
+   CATEGORIAS
+===================================== */
+
+.categories {
+    padding: 85px 7%;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    padding: 35px 20px;
+    text-align: center;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: var(--blanco);
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--rosa);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.category-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--rosa-claro);
+    color: var(--rosa-oscuro);
+    font-size: 30px;
+}
+
+.category-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 13px;
+    color: var(--gris);
+    line-height: 1.6;
+}
+
+/* =====================================
+   PRODUCTOS DESTACADOS
+===================================== */
+
+.products {
+    padding: 85px 7%;
+    background-color: #fff8fa;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.empty-products {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--blanco);
+    border-radius: 10px;
+}
+
+.empty-products i {
+    font-size: 45px;
+    color: var(--rosa-oscuro);
+    margin-bottom: 20px;
+}
+
+.empty-products h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.empty-products p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+/* =====================================
+   SOBRE NOSOTROS
+===================================== */
+
+.about {
+    padding: 85px 10%;
+    background-color: var(--rosa-claro);
+    text-align: center;
+}
+
+.about-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.about-content > p:first-child {
+    color: var(--rosa-oscuro);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.about h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about-content > p:last-child {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--gris);
+}
+
+/* =====================================
+   CONTACTO
+===================================== */
+
+.contact {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rosa-claro);
+    color: var(--negro);
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--rosa);
+    transform: translateY(-5px);
+}
+
+/* =====================================
+   PIE DE PAGINA
+===================================== */
+
+.footer {
+    padding: 35px 20px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+/* =====================================
+   DISEÑO ADAPTABLE - TABLETS
+===================================== */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 15px 4%;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =====================================
+   DISEÑO ADAPTABLE - CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-icons {
+        display: none;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 60px 7%;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .hero-content > p:not(.subtitle) {
+        font-size: 14px;
+    }
+
+    .categories,
+    .products {
+        padding: 60px 5%;
+    }
+
+    .category-container,
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+}
+
+/* =====================================
+   AJUSTES DE DISEÑO - MODA FIT
+===================================== */
+
+/* Encabezado más compacto */
+.header {
+    min-height: 72px;
+    padding: 10px 6%;
+}
+
+.logo h1 {
+    font-size: 26px;
+}
+
+/* Portada más reducida */
+.hero {
+    min-height: 350px;
+    padding: 45px 8%;
+}
+
+.hero h2 {
+    font-size: clamp(36px, 4.5vw, 52px);
+    margin-bottom: 12px;
+}
+
+.hero-content > p:not(.subtitle) {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    margin-bottom: 12px;
+}
+
+.btn-primary {
+    padding: 13px 24px;
+}
+
+/* Categorías más compactas */
+.categories {
+    padding: 55px 6%;
+}
+
+.section-title {
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+}
+
+.category-card {
+    padding: 23px 15px;
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+/* Productos */
+.products {
+    padding: 55px 6%;
+}
+
+/* Sobre nosotros y contacto */
+.about,
+.contact {
+    padding: 55px 8%;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+
+    .header {
+        min-height: auto;
+        padding: 12px 4%;
+    }
+
+    .hero {
+        min-height: 320px;
+        padding: 40px 6%;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .categories,
+    .products {
+        padding: 45px 5%;
+    }
+
+    .category-card {
+        padding: 20px 12px;
+    }
+}
+
+/* =====================================
+   MODA FIT - CATÁLOGO
+===================================== */
+
+/* BUSCADOR */
+
+.catalog-tools {
+    max-width: 480px;
+    margin: 0 auto 25px;
+}
+
+.catalog-tools input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #ead5dc;
+    border-radius: 30px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--negro);
+    background: var(--blanco);
+    transition: all 0.3s ease;
+}
+
+.catalog-tools input:focus {
+    border-color: var(--rosa-oscuro);
+    box-shadow: 0 0 0 3px rgba(214, 111, 145, 0.12);
+}
+
+.catalog-tools input::placeholder {
+    color: #999;
+}
+
+/* FILTROS */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 1px solid var(--rosa);
+    border-radius: 25px;
+    background: var(--blanco);
+    color: var(--negro);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--rosa-oscuro);
+    border-color: var(--rosa-oscuro);
+    color: var(--blanco);
+}
+
+/* TARJETAS DE PRODUCTOS */
+
+.product-card {
+    background: var(--blanco);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-category {
+    color: var(--rosa-oscuro);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-info h3 {
+    color: var(--negro);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.product-info p {
+    color: var(--gris);
+    font-size: 13px;
+    line-height: 1.5;
+    min-height: 38px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.product-bottom strong {
+    color: var(--negro);
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+/* BOTÓN AGREGAR AL CARRITO */
+
+.add-cart-btn {
+    background: var(--negro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 6px;
+    padding: 11px 14px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-cart-btn:hover {
+    background: var(--rosa-oscuro);
+}
+
+.add-cart-btn:focus-visible,
+.filter-btn:focus-visible {
+    outline: 2px solid var(--rosa-oscuro);
+    outline-offset: 3px;
+}
+
+/* ADAPTACIÓN PARA TABLETS Y CELULARES */
+
+@media (max-width: 900px) {
+    .product-card img {
+        height: 210px;
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog-tools {
+        max-width: 100%;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 9px 15px;
+        font-size: 11px;
+    }
+
+    .product-card img {
+        height: 190px;
+    }
+
+    .product-info {
+        padding: 15px;
+    }
+
+    .product-bottom {
+        flex-wrap: wrap;
+    }
+}
+
+/* =====================================
+   ICONO DEL CARRITO
+===================================== */
+
+.header-icons button {
+    position: relative;
+    border: none;
+    background: none;
+    color: var(--negro);
+    font-size: 19px;
+    cursor: pointer;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    background: var(--rosa-oscuro);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    min-width: 19px;
+    height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =====================================
+   VENTANA DEL CARRITO
+===================================== */
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: none;
+    justify-content: flex-end;
+}
+
+.cart-overlay.active {
+    display: flex;
+}
+
+.cart-panel {
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    background: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cart-header h2 {
+    font-size: 22px;
+}
+
+.cart-header button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cart-empty {
+    text-align: center;
+    padding: 35px 10px;
+    color: var(--gris);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cart-item h4 {
+    font-size: 14px;
+}
+
+.cart-item p {
+    color: var(--gris);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.cart-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-actions button {
+    width: 27px;
+    height: 27px;
+    border: none;
+    border-radius: 5px;
+    background: var(--rosa-claro);
+    cursor: pointer;
+}
+
+.cart-actions button:last-child {
+    color: #c03955;
+}
+
+.cart-footer {
+    margin-top: auto;
+    padding-top: 25px;
+    border-top: 1px solid #eeeeee;
+}
+
+.cart-footer h3 {
+    margin-bottom: 20px;
+}
+
+.cart-footer .btn-primary {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* =====================================
+   ADAPTACION A CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    .filter-buttons {
+        gap: 7px;
+    }
+
+    .filter-btn {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .product-card img {
+        height: 240px;
+    }
+
+    .cart-panel {
+        max-width: 100%;
+    }
+}
+/* BOTÓN FLOTANTE DE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    width: 58px;
+    height: 58px;
+    bottom: 22px;
+    right: 22px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+    z-index: 2000;
+}
+
+/* REDES SOCIALES DEL PIE DE PÁGINA */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin: 20px 0;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.footer-social a:hover {
+    transform: scale(1.15);
+}
+/* =====================================
+   PORTADA - ADAPTACIÓN PARA CELULARES
+===================================== */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 550px;
+        padding: 60px 7%;
+        background-position: 60% 20%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .hero-content > p:not(.subtitle) {
+        font-size: 14px;
+    }
+}
+
+/* =====================================
+   MODA FIT - GRILLA Y TARJETAS
+===================================== */
+
+/* GRILLA DE PRODUCTOS */
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1250px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* TARJETAS */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #f3e2e8;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(70, 30, 45, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(70, 30, 45, 0.13);
+}
+
+/* IMÁGENES */
+
+.product-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+    background: #fce8ee;
+}
+
+/* INFORMACIÓN */
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px;
+}
+
+.product-category {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #d66f91;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.product-info h3 {
+    min-height: 42px;
+    margin: 5px 0 10px;
+    color: #171717;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.product-info p {
+    flex: 1;
+    min-height: 42px;
+    margin-bottom: 15px;
+    color: #777777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* PRECIO Y BOTÓN */
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #f3e2e8;
+}
+
+.product-bottom strong {
+    color: #171717;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.add-cart-btn {
+    padding: 11px 16px;
+    border-radius: 25px;
+    background: #171717;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.add-cart-btn:hover {
+    background: #d66f91;
+}
+
+/* SIN RESULTADOS */
+
+.empty-products {
+    grid-column: 1 / -1;
+    padding: 45px 20px;
+    text-align: center;
+    color: #666666;
+}
+
+.empty-products h3 {
+    margin-bottom: 10px;
+    color: #171717;
+}
+
+/* TABLETS */
+
+@media (max-width: 950px) {
+    .products-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .product-card img {
+        height: 230px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .products-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-card {
+        border-radius: 12px;
+    }
+
+    .product-card img {
+        height: 155px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-info h3 {
+        min-height: 38px;
+        font-size: 14px;
+    }
+
+    .product-info p {
+        font-size: 11px;
+    }
+
+    .product-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .product-bottom strong {
+        font-size: 15px;
+    }
+
+    .add-cart-btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* =====================================
+   MODA FIT - DISEÑO DEL CARRITO
+===================================== */
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: flex-end;
+    background: rgba(20, 15, 17, 0.55);
+    backdrop-filter: blur(3px);
+}
+
+.cart-overlay.active {
+    display: flex;
+}
+
+.cart-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 430px;
+    height: 100%;
+    padding: 25px;
+    background: #ffffff;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+    animation: cartSlideIn 0.3s ease;
+}
+
+@keyframes cartSlideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ENCABEZADO */
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f3e2e8;
+}
+
+.cart-header h2 {
+    color: #171717;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.cart-header button {
+    border: none;
+    background: transparent;
+    color: #171717;
+    font-size: 27px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cart-header button:hover {
+    color: #d66f91;
+}
+
+/* PRODUCTOS DEL CARRITO */
+
+#cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px 0;
+}
+
+.cart-empty {
+    padding: 35px 10px;
+    color: #888888;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 0;
+    border-bottom: 1px solid #f3e2e8;
+}
+
+.cart-item h4 {
+    margin-bottom: 7px;
+    color: #171717;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.cart-item p {
+    color: #d66f91;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* CONTROLES DE CANTIDAD */
+
+.cart-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-actions button {
+    width: 29px;
+    height: 29px;
+    border: 1px solid #ead5dc;
+    border-radius: 50%;
+    background: #fff8fa;
+    color: #171717;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cart-actions button:hover {
+    background: #d66f91;
+    color: #ffffff;
+}
+
+.cart-actions span {
+    min-width: 16px;
+    color: #171717;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.cart-actions button[data-action="remove"] {
+    border: none;
+    background: transparent;
+    color: #d66f91;
+}
+
+.cart-actions button[data-action="remove"]:hover {
+    color: #a92e55;
+    background: #fce8ee;
+}
+
+/* TOTAL Y FINALIZACIÓN */
+
+.cart-footer {
+    padding-top: 20px;
+    border-top: 1px solid #f3e2e8;
+}
+
+.cart-footer h3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #171717;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.cart-footer .btn-primary {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #d66f91;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cart-footer .btn-primary:hover {
+    background: #171717;
+}
+
+/* ADAPTACIÓN MÓVIL */
+
+@media (max-width: 600px) {
+    .cart-panel {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+}
+/* =====================================
+   MODA FIT - BOTÓN VACIAR CARRITO
+===================================== */
+
+.clear-cart-btn {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 11px;
+    border: 1px solid #d66f91;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #d66f91;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clear-cart-btn:hover {
+    background: #d66f91;
+    color: #ffffff;
+}
