@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moda Fit: indumentaria, calzado, accesorios y bienestar. Descubrí nuestra tienda online.">
+
+    <title>Moda Fit | Tu estilo, tu energía</title>
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+ 
+<!-- ENCABEZADO -->
+<header class="header">
+
+   <div class="logo">
+    <img src="img/logomodafit_recortado.png" alt="Logo Moda Fit">
+</div>
+
+    <nav class="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-icons">
+
+        <a href="#productos" aria-label="Buscar productos">
+            <i class="fas fa-search"></i>
+        </a>
+
+        <a href="https://www.instagram.com/modaa.fit1278/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram Moda Fit">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <button id="cart-toggle" aria-label="Abrir carrito">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+<!-- PORTADA PRINCIPAL -->
+<main>
+
+<!-- PORTADA PRINCIPAL -->
+<main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="subtitle">BIENVENIDOS A MODA FIT</p>
+
+                <h2>Tu estilo.<br>Tu energía.</h2>
+
+                <p>
+                    Encontrá todo lo que buscás en un solo lugar.
+                    Moda, comodidad y estilo para cada momento.
+                </p>
+
+                <a href="#categorias" class="btn-primary">
+                    DESCUBRÍ NUESTRA TIENDA
+                </a>
+            </div>
+        </section>
+
+        <!-- CATEGORÍAS -->
+        <section class="categories" id="categorias">
+
+            <div class="section-title">
+                <p>EXPLORÁ NUESTRA TIENDA</p>
+                <h2>Comprá por categoría</h2>
+            </div>
+
+            <div class="category-container">
+
+                <article class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-person-dress"></i>
+                    </div>
+                    <h3>Moda Mujer</h3>
+                    <p>Indumentaria deportiva y más.</p>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-person"></i>
+                    </div>
+                    <h3>Moda Hombre</h3>
+                    <p>Estilo y comodidad.</p>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <h3>Calzados</h3>
+                    <p>Encontrá tu próximo par.</p>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Nutrición deportiva</h3>
+                    <p>Productos para tu actividad.</p>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-bag-shopping"></i>
+                    </div>
+                    <h3>Accesorios</h3>
+                    <p>Detalles que completan tu estilo.</p>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-spray-can-sparkles"></i>
+                    </div>
+                    <h3>Perfumería textil</h3>
+                    <p>Fragancias para tus prendas.</p>
+                </article>
+
+            </div>
+        </section>
+
+       
+<!-- CATÁLOGO DE PRODUCTOS -->
+<section class="products" id="productos">
+
+    <div class="section-title">
+        <p>DESCUBRÍ NUESTRA COLECCIÓN</p>
+        <h2>Encontrá tu estilo</h2>
+    </div>
+
+    <div class="catalog-tools">
+        <input
+            type="search"
+            id="product-search"
+            placeholder="Buscar productos..."
+            aria-label="Buscar productos"
+        >
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-category="Todos">Todos</button>
+        <button class="filter-btn" data-category="Mujer">Mujer</button>
+        <button class="filter-btn" data-category="Hombre">Hombre</button>
+        <button class="filter-btn" data-category="Calzado">Calzado</button>
+        <button class="filter-btn" data-category="Accesorios">Accesorios</button>
+        <button class="filter-btn" data-category="Nutrición">Nutrición</button>
+    </div>
+
+    <div class="products-container" id="products-container">
+        <!-- JavaScript cargará los productos aquí -->
+    </div>
+
+</section>
+
+<!-- CARRITO DE COMPRAS -->
+<div class="cart-overlay" id="cart-overlay">
+    <div class="cart-panel">
+
+        <div class="cart-header">
+            <h2>Mi carrito</h2>
+            <button id="close-cart" aria-label="Cerrar carrito">×</button>
+        </div>
+
+        <div id="cart-items">
+            <p class="cart-empty">Tu carrito está vacío.</p>
+        </div>
+
+        <div class="cart-footer">
+            <h3>Total: <span id="cart-total">$0</span></h3>
+            <button id="checkout-btn" class="btn-primary">
+                REALIZAR PEDIDO
+            </button>
+        </div>
+
+    </div>
+</div>
+
+        <!-- SOBRE NOSOTROS -->
+        <section class="about" id="nosotros">
+            <div class="about-content">
+                <p>CONOCÉ MODA FIT</p>
+                <h2>Mucho más que moda</h2>
+                <p>
+                    Un espacio donde encontrás indumentaria,
+                    calzado, accesorios y productos para acompañar
+                    tu estilo de vida.
+                </p>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contact" id="contacto">
+            <div class="section-title">
+                <p>ESTAMOS PARA VOS</p>
+                <h2>Conectate con Moda Fit</h2>
+            </div>
+
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+   
+
+<!-- PIE DE PÁGINA -->
+<footer class="footer">
+
+    <h2>MODA <span>FIT</span></h2>
+
+    <p>Tu estilo. Tu energía.</p>
+
+    <div class="footer-social">
+
+        <a href="https://www.instagram.com/modaa.fit1278/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram Moda Fit">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.facebook.com/modaa.fit.2024"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Facebook Moda Fit">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://wa.me/5493863691296"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="WhatsApp Moda Fit">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+    <p>&copy; 2026 Moda Fit. Todos los derechos reservados.</p>
+
+</footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+<a
+    href="https://wa.me/5493863691296?text=Hola%2C%20quiero%20consultar%20por%20un%20producto%20de%20Moda%20Fit"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>  
+</body>
+</html>
